@@ -1,13 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 
 
-function Navbar() {
-    return (
+class App extends Component {
+    render (){
 
 
-        <nav className="navbar navbar-expand-lg text-light">
+        return <nav className="navbar navbar-expand-lg text-light">
             <div className="container">
                 <Link className="navbar-brand" to="/">Project Name</Link>
                 <ul className="navbar-nav">
@@ -39,7 +39,7 @@ function Navbar() {
             </div>
         </nav>
 
-    );
+    }
 }
 
 export default Navbar;
