@@ -1,7 +1,12 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SearchBar from "./SearchBar";
 import places from "../apis/places";
 import "../components/App.css";
+import Navbar from "../components/Navbar";
+import About from "./About";
+import Login from "./Login";
+import Home from "./HomePage";
 
 class App extends React.Component {
   state = { hotels: [], food: [], interest: [], isLoading: false };
@@ -33,30 +38,46 @@ class App extends React.Component {
   };
   render() {
     return (
-      <div
-        className="ui container"
-        style={{ marginTop: "10px", background: "white" }}
-      >
-        <SearchBar onSubmit={this.onSearchSubmit} />
-        {this.state.isLoading ? (
-          <p>Loading....</p>
-        ) : (
-          <>
-            <h1>Hotels</h1>
-            <pre style={{ background: "white" }}>
-              {JSON.stringify(this.state.hotels, null, 2)}
-            </pre>
-            <h1>Food</h1>
-            <pre style={{ background: "white" }}>
-              {JSON.stringify(this.state.food, null, 2)}
-            </pre>
-            <h1>Points of Interest</h1>
-            <pre style={{ background: "white" }}>
-              {JSON.stringify(this.state.interest, null, 2)}
-            </pre>
-          </>
-        )}
-      </div>
+      <Router>
+        <div>
+          <Navbar />
+          <Switch>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+          <div
+            className="ui container"
+            style={{ marginTop: "10px", background: "white" }}
+          >
+            <SearchBar onSubmit={this.onSearchSubmit} />
+            {this.state.isLoading ? (
+              <p>Loading....</p>
+            ) : (
+              <>
+                <h1>Hotels</h1>
+                <pre style={{ background: "white" }}>
+                  {JSON.stringify(this.state.hotels, null, 2)}
+                </pre>
+                <h1>Food</h1>
+                <pre style={{ background: "white" }}>
+                  {JSON.stringify(this.state.food, null, 2)}
+                </pre>
+                <h1>Points of Interest</h1>
+                <pre style={{ background: "white" }}>
+                  {JSON.stringify(this.state.interest, null, 2)}
+                </pre>
+              </>
+            )}
+          </div>
+        </div>
+      </Router>
     );
   }
 }
