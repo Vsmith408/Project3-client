@@ -2,17 +2,17 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 
-class App extends Component {
+class Navbar extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg text-light">
         <div className="container">
           <Link className="navbar-brand" to="/">
-            Project Name
+            Travel App
           </Link>
           <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link
+            {/* <li className="nav-item">
+              {/* <Link
                 to="/home"
                 className={
                   window.location.pathname === "/home"
@@ -23,7 +23,7 @@ class App extends Component {
                 {" "}
                 Home
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link
                 to="/about"
