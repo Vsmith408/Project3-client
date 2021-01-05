@@ -1,22 +1,19 @@
-import React from 'react'
-import { Button, Card } from 'semantic-ui-react'
+import React from "react";
+import Favourite from "./FavBtn";
 
+const ResultsCard = (props) => (
+  <div className="ui cards">
+    <div className="card">
+      <div className="content">
+        <div className="header">{props.name}</div>
+        <div className="meta">{props.rating}</div>
+        <div className="description">{props.address}</div>
+      </div>
+      <div className="extra content">
+        <Favourite />
+      </div>
+    </div>
+  </div>
+);
 
-const CardExampleGroups = (props) => (
-  <Card.Group>
-    <Card>
-      <Card.Content>
-        <Card.Header>{props.name}</Card.Header>
-        <Card.Meta>    {props.opening_hours} , {props.rating} </Card.Meta>
-        <Card.Description>
-    {props.formatted_address}
-        </Card.Description>
-      </Card.Content>
-      <Card.Content extra>
-        <div className='ui button'>
-          <Favourite/>
-        </div>
-      </Card.Content>
-    </Card>
-  </Card.Group>
-    )
+export default ResultsCard;
