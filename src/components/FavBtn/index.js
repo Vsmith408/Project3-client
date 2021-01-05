@@ -1,11 +1,11 @@
 import React from "react";
 
 function Favourite() {
-    return (
-        <div>
-           <Button>Add to Favourites</Button>
-        </div>
-    )
+  return (
+    <div>
+      <button className="ui basic green button">Add to Favourites</button>
+    </div>
+  );
 }
 
 export default Favourite;
