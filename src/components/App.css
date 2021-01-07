@@ -1,4 +1,9 @@
-body {
+.searchBarWrapper {
   background-image: url(../Images/background-image.jpg);
   background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 250px 0;
 }
