@@ -13,10 +13,10 @@ class App extends React.Component {
         <div>
           <Navbar />
           <Switch>
-            <Route path="./pages/About">
+            <Route path="/About">
               <About />
             </Route>
-            <Route path="./pages/login">
+            <Route path="/login">
               <Login />
             </Route>
             <Route path="/">
