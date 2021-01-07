@@ -91,7 +91,7 @@ class Home extends React.Component {
                     <ResultsCard
                       name={interest.name}
                       address={interest.address}
-                      rating={interest.rating} 
+                      rating={interest.rating}
                     />
                   </div>
                 ))}

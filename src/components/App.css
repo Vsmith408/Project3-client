@@ -7,8 +7,19 @@
   align-items: center;
   padding: 250px 0;
 }
+
+
+.header{
+  padding-bottom: 10px;
+}
+
+.bio {
+  font-size: 18px;
+}
+
 body {
   background-image: url(../Images/background-image.jpg);
   background-size: cover;
   
 }
+
