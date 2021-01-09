@@ -3,27 +3,24 @@ import { Link } from "react-router-dom";
 import "./style.css";
 
 class Navbar extends Component {
+state = { clicked: false }
+
+handleClick = () => {
+  this.setState({ clicked: !this.state.clicked })
+}
+
   render() {
     return (
-      <nav className="navbar navbar-expand-lg text-light">
+      <nav className="navbar ">
         <div className="container">
           <Link className="navbar-brand" to="/">
             Travel App
           </Link>
-          <ul className="navbar-nav">
-            {/* <li className="nav-item">
-              {/* <Link
-                to="/home"
-                className={
-                  window.location.pathname === "/home"
-                    ? "nav-link active"
-                    : "nav-link"
-                }
-              >
-                {" "}
-                Home
-              </Link>
-            </li> */}
+          <div className="menu-icon" onClick={this.handleClick}>
+            <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
+          </div>
+          <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
+            
             <li className="nav-item">
               <Link
                 to="/about"
