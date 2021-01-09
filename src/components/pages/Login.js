@@ -3,13 +3,14 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { Link } from "react-router-dom";
 
 const Login = () => {
-    const { loginWithRedirect } = useAuth0();
+    const { loginWithRedirect, isAuthenticated } = useAuth0();
     return (
-        <Link
-        onClick={() => loginWithRedirect()}
-        >
-            Log in
-        </Link>
+        !isAuthenticated && (
+            <Link
+            onClick={() => loginWithRedirect()}>
+                Log in
+            </Link>
+        )
     );
 };
 
