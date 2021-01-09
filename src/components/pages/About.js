@@ -3,12 +3,12 @@ import about from "../../Images/about.jpg";
 
 function About() {
   return (
-    <div class="ui vertically divided grid">
-      <div class="two column row">
-        <div class="column">
+    <div className="ui vertically divided grid">
+      <div className="two column row">
+        <div className="column">
           <img className="ui huge image" src={about} alt="travel"></img>
         </div>
-        <div class="column">
+        <div className="column">
           <h1 className="header">About TravelNow</h1>
           <p className="bio">
             Find your next adventure with TravelNow. We are here to provide you
