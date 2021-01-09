@@ -1,7 +1,7 @@
 .navbar {
   background-color: rgb(85, 140, 114);
   height: 70px;
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
@@ -17,19 +17,16 @@
   margin-right: 2rem;
 }
 
-
 a {
   text-decoration: none;
   color: white;
 }
 
-
 .navbar-brand {
   margin: 10px;
   font-size: 2rem;
-  padding-right: 150px
+  padding-right: 150px;
 }
-
 
 .nav-item {
   color: white;
@@ -44,7 +41,7 @@ a {
   text-decoration: underline;
 }
 .fa-bars {
-  color:white;
+  color: white;
 }
 
 .menu-icon {
@@ -96,5 +93,4 @@ a {
     color: white;
     font-size: 2rem;
   }
-
 }
