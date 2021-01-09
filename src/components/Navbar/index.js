@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
+
 import { withAuth0 } from "@auth0/auth0-react";
+
 import Login from "../pages/Login";
 import Logout from "../pages/Logout";
 
 class Navbar extends Component {
+
   state = { clicked: false };
 
   handleClick = () => {
