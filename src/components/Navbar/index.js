@@ -12,7 +12,7 @@ handleClick = () => {
   render() {
     return (
       <nav className="navbar ">
-        <div className="container">
+        {/* <div className="container"> */}
           <Link className="navbar-brand" to="/">
             Travel App
           </Link>
@@ -20,7 +20,7 @@ handleClick = () => {
             <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
           </div>
           <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-            
+          
             <li className="nav-item">
               <Link
                 to="/about"
@@ -58,7 +58,7 @@ handleClick = () => {
               </Link>
             </li>
           </ul>
-        </div>
+        {/* </div> */}
       </nav>
     );
   }
