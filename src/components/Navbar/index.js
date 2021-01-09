@@ -18,7 +18,7 @@ handleClick = () => {
   render() {
     return (
       <nav className="navbar ">
-        <div className="container">
+        {/* <div className="container"> */}
           <Link className="navbar-brand" to="/">
             Travel App
           </Link>
@@ -26,7 +26,7 @@ handleClick = () => {
             <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
           </div>
           <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-            
+          
             <li className="nav-item">
               <Link
                 to="/about"
@@ -39,6 +39,37 @@ handleClick = () => {
                 About
               </Link>
             </li>
+
+            <li className="nav-item">
+              <Link
+                to="/login"
+                className={
+                  window.location.pathname === "/login"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+              >
+                Login
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/signup"
+                className={
+                  window.location.pathname === "/signup"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+              >
+                Sign Up
+              </Link>
+            </li>
+          </ul>
+        {/* </div> */}
+      </nav>
+    );
+  }
+
             <div class="loginAuth">
                 <li className="nav-item">
                   <Login>{
@@ -55,6 +86,7 @@ handleClick = () => {
     </nav>
   );
 }
+
 }
 
 export default Navbar;
