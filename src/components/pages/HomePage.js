@@ -2,15 +2,6 @@ import React from "react";
 import places from "../../apis/places";
 import SearchBar from "../SearchBar";
 import ResultsCard from "../ResultsCard";
-import { css } from "@emotion/core";
-import GridLoader from "react-spinners/GridLoader";
-
-const override = css`
-  display: block;
-  margin: 0 auto;
-  border-color: green;
-  color: green;
-`;
 
 class Home extends React.Component {
   state = { hotels: [], food: [], interest: [], isLoading: false };
@@ -64,7 +55,8 @@ class Home extends React.Component {
           }}
         >
           {this.state.isLoading ? (
-            <GridLoader loading={true} css={override} size={10} />          ) : (
+            <div className="ui active centered inline massive text loader" />
+          ) : (
             <>
               {this.state.hotels.length > 0 && <h1>Hotels</h1>}
               <div className="ui grid">
