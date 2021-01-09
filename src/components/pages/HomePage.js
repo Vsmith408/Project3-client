@@ -2,7 +2,16 @@ import React from "react";
 import places from "../../apis/places";
 import SearchBar from "../SearchBar";
 import ResultsCard from "../ResultsCard";
+import { css } from "@emotion/react";
+import GridLoader from "react-spinners/GridLoader";
 
+
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: green;
+  color: green;
+`;
 class Home extends React.Component {
   state = { hotels: [], food: [], interest: [], isLoading: false };
 
@@ -17,7 +26,7 @@ class Home extends React.Component {
     this.setState({ isLoading: true });
     try {
       const response = await places.get(
-        `http://localhost:3001/api/google/places`,
+        `${process.env.REACT_APP_API_URL}/api/google/places`,
         {
           params: { type },
           headers: {
@@ -44,6 +53,7 @@ class Home extends React.Component {
           <SearchBar onSubmit={this.onSearchSubmit} />
         </div>
         <div
+        
           className="ui container"
           style={{
             marginTop: -102,
@@ -55,7 +65,7 @@ class Home extends React.Component {
           }}
         >
           {this.state.isLoading ? (
-            <div className="ui active centered inline massive text loader" />
+            <GridLoader loading={true} css={override} size={10} />
           ) : (
             <>
               {this.state.hotels.length > 0 && <h1>Hotels</h1>}

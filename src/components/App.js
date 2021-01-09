@@ -5,7 +5,11 @@ import Navbar from "../components/Navbar";
 import About from "./pages/About";
 import Login from "./pages/Login";
 import Home from "./pages/HomePage";
+
 import Profile from "./pages/Profile";
+
+
+import Favorites from "./pages/Favorites";
 
 
 class App extends React.Component {

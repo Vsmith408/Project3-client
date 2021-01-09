@@ -1,14 +1,9 @@
-import React from 'react'
+import React from "react";
 
 class Favorites extends React.Component {
-    render() {
-     
-    
-        return(
-            <div>Favorites</div>
-           
-        )
-        }
-        }
+  render() {
+    return <div>Favorites</div>;
+  }
+}
 
-export default Favorites
+export default Favorites;

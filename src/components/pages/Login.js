@@ -1,8 +1,8 @@
-import React from 'react';
-import { useAuth0 } from '@auth0/auth0-react';
-import { Link } from "react-router-dom";
+import React from "react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Login = () => {
+
     const { loginWithRedirect, isAuthenticated } = useAuth0();
     return (
         !isAuthenticated && (
@@ -12,7 +12,7 @@ const Login = () => {
             </Link>
         )
     );
-};
 
+};
 
 export default Login;
