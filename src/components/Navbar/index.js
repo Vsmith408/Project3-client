@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
-import { useAuth0 } from "@auth0/auth0-react";
+
 import Login from "../pages/Login";
 import Logout from "../pages/Logout";
 
