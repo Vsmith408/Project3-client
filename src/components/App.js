@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import About from "./pages/About";
 import Login from "./pages/Login";
 import Home from "./pages/HomePage";
+import Favorites from "./pages/Favorites";
 
 class App extends React.Component {
   render() {
@@ -18,6 +19,9 @@ class App extends React.Component {
             </Route>
             <Route path="/login">
               <Login />
+            </Route>
+            <Route path="/favorite">
+              <Favorites />
             </Route>
             <Route path="/">
               <Home />
