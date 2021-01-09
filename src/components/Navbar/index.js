@@ -64,11 +64,6 @@ class Navbar extends Component {
       </nav>
     );
   }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 926f605b90626fead73f195b0233d4478ee6d261
 }
 
 export default withAuth0(Navbar);
