@@ -24,6 +24,9 @@ class App extends React.Component {
             <Route path="/Profile">
               <Profile />
             </Route>
+            <Route path="/favorite">
+              <Favorites />
+            </Route>
             <Route path="/">
               <Home />
             </Route>
