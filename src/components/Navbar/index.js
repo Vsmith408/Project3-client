@@ -7,6 +7,7 @@ import Logout from "../pages/Logout";
 
 
 
+
 class Navbar extends Component {
 state = { clicked: false }
 
@@ -39,38 +40,21 @@ handleClick = () => {
                 About
               </Link>
             </li>
-
             <li className="nav-item">
               <Link
-                to="/login"
+                to="/favorite"
                 className={
-                  window.location.pathname === "/login"
+                  window.location.pathname === "/favorite"
                     ? "nav-link active"
                     : "nav-link"
                 }
               >
-                Login
+                Favorites
               </Link>
             </li>
-            <li className="nav-item">
-              <Link
-                to="/signup"
-                className={
-                  window.location.pathname === "/signup"
-                    ? "nav-link active"
-                    : "nav-link"
-                }
-              >
-                Sign Up
-              </Link>
-            </li>
-          </ul>
-        {/* </div> */}
-      </nav>
-    );
-  }
 
-            <div class="loginAuth">
+            <div className="loginAuth">
+           
                 <li className="nav-item">
                   <Login>{
                     
@@ -81,11 +65,14 @@ handleClick = () => {
                 <Logout/> : </Login>
               </li>
           </div>    
-        </ul>
-      </div>
-    </nav>
-  );
-}
+   
+           
+          </ul>
+        {/* </div> */}
+      </nav>
+    );
+  }
+
 
 }
 
