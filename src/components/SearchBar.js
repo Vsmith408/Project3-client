@@ -11,7 +11,7 @@ class SearchBar extends React.Component {
     return (
       <div className="">
         <form onSubmit={this.onFormSubmit} className="ui form">
-          <div className="ui huge  icon input">
+          <div className="ui huge icon input">
             <input
               style={{ width: 600, maxWidth: "90vw" }}
               type="text"
