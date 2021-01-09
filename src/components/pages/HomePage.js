@@ -26,7 +26,7 @@ class Home extends React.Component {
     this.setState({ isLoading: true });
     try {
       const response = await places.get(
-        `http://localhost:3001/api/google/places`,
+        `${process.env.REACT_APP_API_URL}/api/google/places`,
         {
           params: { type },
           headers: {
@@ -64,7 +64,8 @@ class Home extends React.Component {
           }}
         >
           {this.state.isLoading ? (
-            <GridLoader loading={true} css={override} size={10} />          ) : (
+            <GridLoader loading={true} css={override} size={10} />
+          ) : (
             <>
               {this.state.hotels.length > 0 && <h1>Hotels</h1>}
               <div className="ui grid">

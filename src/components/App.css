@@ -5,9 +5,9 @@
 }
 
 .searchBarWrapper {
-  position: relative;
-   background-image: url(../Images/travel-copy.jpg); 
-  background-size: cover; 
+
+  background-image: url(../Images/travel-copy.jpg);
+  background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
@@ -15,9 +15,9 @@
   padding: 250px 0;
 }
 
-
-.header{
+.header {
   padding-bottom: 10px;
+  padding-top: 40px;
 }
 
 .bio {
