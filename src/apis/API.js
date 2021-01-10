@@ -14,6 +14,6 @@ export default {
   },
   // Saves a favorite to the database
   saveFavs: function() {
-    return axios.post("/api/favorite/");
+    return axios.post("/api/favorite");
   }
 };

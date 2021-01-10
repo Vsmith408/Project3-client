@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import API from "../apis/API";
 
 const ResultsCard = (props) => {
 
+  /*
   function addToFavs() {
     API.saveFavs()
       .then(res => console.log("saved!"))
       .catch(err => console.log(err));
   }
+  */
   
 
   return(
@@ -25,7 +27,7 @@ const ResultsCard = (props) => {
         <div className="description">{props.address}</div>
       </div>
       <div className="extra content">
-        <button onClick={() => {console.log("click!") && addToFavs(props.name)}} >Add To Favourites</button>
+        <button onClick={() => {console.log("click!")}} >Add To Favourites</button>
       </div>
     </div>
   </div>
