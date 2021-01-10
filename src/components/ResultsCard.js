@@ -1,13 +1,14 @@
-import React from "react";
-import Favourite from "./FavBtn";
-import saveFav from "./pages/Favs";
+import React, { useEffect, useState } from "react";
+import API from "../apis/API";
 
 const ResultsCard = (props) => {
 
-  const clickedBtn = (arg) => {
-    arg.saveFav()
-    console.log("click!")
+  function addToFavs() {
+    API.saveFavs()
+      .then(res => console.log("saved!"))
+      .catch(err => console.log(err));
   }
+  
 
   return(
     <div className="ui cards">
@@ -24,7 +25,7 @@ const ResultsCard = (props) => {
         <div className="description">{props.address}</div>
       </div>
       <div className="extra content">
-        <button onClick={() => {console.log("click!") && clickedBtn(props)}} >Add To Favourites</button>
+        <button onClick={() => {console.log("click!") && addToFavs(props.name)}} >Add To Favourites</button>
       </div>
     </div>
   </div>
