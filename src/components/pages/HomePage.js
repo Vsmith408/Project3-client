@@ -56,8 +56,13 @@ class Home extends React.Component {
     return (
       <>
         <div className="searchBarWrapper">
-          <SearchBar onSubmit={this.onSearchSubmit} />
+        <div >
+        <h1 className='home-header'>Find your next adventure here </h1>
         </div>
+          <SearchBar onSubmit={this.onSearchSubmit} />
+          
+        </div>
+      
         <div
           className="ui container"
           style={{

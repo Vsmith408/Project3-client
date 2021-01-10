@@ -9,7 +9,7 @@ function About() {
           <img className="ui huge image" src={about} alt="travel"></img>
         </div>
         <div className="column">
-          <h1 className="header">About TravelNow</h1>
+          <h1 className="aboutheader">About TravelNow</h1>
           <p className="bio">
             Find your next adventure with TravelNow. We are here to provide you
             with access to hotels, restaurants and even things to do near the
