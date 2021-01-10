@@ -34,7 +34,7 @@ class App extends React.Component {
               <Home />
             </Route>
             <Route path="./pages/favs">
-                <Favs />
+              <Favs />
             </Route>
           </Switch>
         </div>

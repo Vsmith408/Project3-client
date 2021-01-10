@@ -6,21 +6,20 @@ const Profile = () => {
 
   return (
     isAuthenticated && (
-  
-<div className="ui raised centered card">
-  <div className="card"></div>
-  <img className="ui centered medium image" src={user.picture} alt={user.name}/> 
-    <div className=" content">
-      <h1 className="header">{user.name}</h1>
-      <p className="description">
-      {user.email}
-      </p>
-      
+      <div className="ui raised centered card">
+        <div className="card"></div>
+        <img
+          className="ui centered medium image"
+          src={user.picture}
+          alt={user.name}
+        />
+        <div className=" content">
+          <h1 className="header">{user.name}</h1>
+          <p className="description">{user.email}</p>
+        </div>
       </div>
-    </div>
-
     )
-  )
+  );
 };
 
 export default Profile;

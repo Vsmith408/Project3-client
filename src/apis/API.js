@@ -1,19 +1,21 @@
 import axios from "axios";
 
-export default {
+const API = {
   // Gets all books
-  getFavs: function() {
+  getFavs: function () {
     return axios.get("/api/favorite");
   },
-  getFav: function(id) {
-      return axios.get("/api/favorite/" + id);
+  getFav: function (id) {
+    return axios.get("/api/favorite/" + id);
   },
   // Deletes the book with the given id
-  deleteFav: function(id) {
+  deleteFav: function (id) {
     return axios.delete("/api/favorite/" + id);
   },
   // Saves a book to the database
-  saveFavs: function() {
+  saveFavs: function () {
     return axios.post("/api/favorite");
-  }
+  },
 };
+
+export default API;
