@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
+import axios from "axios";
 
 function Favourite() {
-  return (
+    return (
     <div>
       <button className="ui basic green button">Add to Favourites</button>
     </div>
@@ -9,3 +10,5 @@ function Favourite() {
 }
 
 export default Favourite;
+
+//use react power plug npm package to toggle the colour of the button if in favourites or not
