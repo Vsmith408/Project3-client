@@ -5,29 +5,22 @@
 }
 
 .searchBarWrapper {
-
-
-/*   background-image: url(../Images/travel-copy.jpg); */
-/*   background-size: cover; */
-
-  position: relative;
-
+  background-image: url(../Images/travel-copy.jpg);
+  background-size: cover;
 
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 250px 0;
+  height: calc(100vh - 70px);
 }
 
-
-
-body {
+/* body {
   background-image: url(../Images/travel-copy.jpg);
-}
+} */
 
-.header{
-
+.header {
   padding-bottom: 10px;
   padding-top: 40px;
 }

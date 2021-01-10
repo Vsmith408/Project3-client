@@ -8,9 +8,7 @@ import Home from "./pages/HomePage";
 
 import Profile from "./pages/Profile";
 
-
 import Favorites from "./pages/Favorites";
-
 
 class App extends React.Component {
   render() {
@@ -23,7 +21,7 @@ class App extends React.Component {
               <About />
             </Route>
             <Route path="/login">
-              <Login />              
+              <Login />
             </Route>
             <Route path="/Profile">
               <Profile />
