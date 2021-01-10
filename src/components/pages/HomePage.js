@@ -2,6 +2,7 @@ import React from "react";
 import places from "../../apis/places";
 import SearchBar from "../SearchBar";
 import ResultsCard from "../ResultsCard";
+import API from "../../apis/API";
 
 class Home extends React.Component {
   state = { hotels: [], food: [], interest: [], isLoading: false };
@@ -37,6 +38,9 @@ class Home extends React.Component {
       this.setState({ isLoading: false });
     }
   };
+
+  
+
   render() {
     return (
       <div

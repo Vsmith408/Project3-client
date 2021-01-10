@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import About from "./pages/About";
 import Login from "./pages/Login";
 import Home from "./pages/HomePage";
+import Favs from "./pages/Favs";
 
 class App extends React.Component {
   render() {
@@ -21,6 +22,9 @@ class App extends React.Component {
             </Route>
             <Route path="/">
               <Home />
+            </Route>
+            <Route path="./pages/favs">
+                <Favs />
             </Route>
           </Switch>
         </div>
