@@ -21,4 +21,6 @@ function MyToggle() {
   </Toggle>;
 }
 
-const App = () => <MyToggle default={true} />;
+export default MyToggle;
+
+// const App = () => <MyToggle default={true} />;
