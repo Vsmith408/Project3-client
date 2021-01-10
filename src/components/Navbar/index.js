@@ -8,7 +8,6 @@ import Login from "../pages/Login";
 import Logout from "../pages/Logout";
 
 class Navbar extends Component {
-
   state = { clicked: false };
 
   handleClick = () => {
@@ -16,7 +15,7 @@ class Navbar extends Component {
   };
 
   render() {
-    console.log(this.props)
+    console.log(this.props);
     return (
       <nav className="navbar ">
         {/* <div className="container"> */}
@@ -54,9 +53,27 @@ class Navbar extends Component {
             </Link>
           </li>
 
+          <li className="nav-item">
+            <Link
+              to="/profile"
+              className={
+                window.location.pathname === "/profile"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              Profile
+            </Link>
+          </li>
+
           <div className="loginAuth">
             <li className="nav-item">
-              {!this.props.auth0.isAuthenticated ? <Login /> : <Logout />}
+              <Login>
+                {window.location.pathname === "/login"
+                  ? "nav-link active"
+                  : "nav-link"}
+              </Login>{" "}
+              <Logout />
             </li>
           </div>
         </ul>

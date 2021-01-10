@@ -16,8 +16,8 @@ const ResultsCard = (props) => {
         <div className="header">{props.name}</div>
         <div className="meta">
           {props.rating}{" "}
-          <div class="ui  rating" data-max-rating="1">
-            <i class="star icon"></i>
+          <div className="ui  rating" data-max-rating="1">
+            <i className="star icon"></i>
           </div>{" "}
         </div>
 
