@@ -3,17 +3,17 @@ import axios from "axios";
 export default {
   // Gets all books
   getFavs: function() {
-    return axios.get("/api/favs");
+    return axios.get("/api/favorite");
   },
   getFav: function(id) {
-      return axios.get("/api/favs/" + id);
+      return axios.get("/api/favorite/" + id);
   },
   // Deletes the book with the given id
   deleteFav: function(id) {
-    return axios.delete("/api/favs/" + id);
+    return axios.delete("/api/favorite/" + id);
   },
   // Saves a book to the database
   saveFavs: function() {
-    return axios.post("/api/favs");
+    return axios.post("/api/favorite");
   }
 };

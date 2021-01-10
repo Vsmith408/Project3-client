@@ -1,11 +1,11 @@
 import React from "react";
 import Favourite from "./FavBtn";
-import saveFav from "./pages/Favs";
+import saveFavs from "./pages/Favs";
 
 const ResultsCard = (props) => {
 
   const clickedBtn = (arg) => {
-    arg.saveFav()
+    arg.saveFavs()
     console.log("click!")
   }
 
@@ -24,7 +24,7 @@ const ResultsCard = (props) => {
         <div className="description">{props.address}</div>
       </div>
       <div className="extra content">
-        <button onClick={() => {console.log("click!") && clickedBtn(props)}} >Add To Favourites</button>
+        <button onClick={clickedBtn} >Add To Favourites</button>
       </div>
     </div>
   </div>
