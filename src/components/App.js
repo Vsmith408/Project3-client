@@ -7,6 +7,12 @@ import Login from "./pages/Login";
 import Home from "./pages/HomePage";
 import Favs from "./pages/Favs";
 
+import Profile from "./pages/Profile";
+
+
+import Favorites from "./pages/Favorites";
+
+
 class App extends React.Component {
   render() {
     return (
@@ -14,11 +20,17 @@ class App extends React.Component {
         <div>
           <Navbar />
           <Switch>
-            <Route path="./pages/About">
+            <Route path="/About">
               <About />
             </Route>
-            <Route path="./pages/login">
-              <Login />
+            <Route path="/login">
+              <Login />              
+            </Route>
+            <Route path="/Profile">
+              <Profile />
+            </Route>
+            <Route path="/favorite">
+              <Favorites />
             </Route>
             <Route path="/">
               <Home />

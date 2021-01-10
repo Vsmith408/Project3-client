@@ -9,15 +9,17 @@ class SearchBar extends React.Component {
   };
   render() {
     return (
-      <div className="ui segment">
+      <div className="">
         <form onSubmit={this.onFormSubmit} className="ui form">
-          <div className="field">
+          <div className="ui huge icon input">
             <input
+              style={{ width: 600, maxWidth: "90vw" }}
               type="text"
               placeholder="Search adventures here"
               value={this.state.term}
               onChange={(e) => this.setState({ term: e.target.value })}
             />
+            <i class="search icon"></i>
           </div>
         </form>
       </div>

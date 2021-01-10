@@ -1,4 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.searchBarWrapper {
+
+
+/*   background-image: url(../Images/travel-copy.jpg); */
+/*   background-size: cover; */
+
+  position: relative;
+
+
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 250px 0;
+}
+
+
+
 body {
-  background-image: url(../Images/background-image.jpg);
-  background-size: cover;
+  background-image: url(../Images/travel-copy.jpg);
+}
+
+.header{
+
+  padding-bottom: 10px;
+  padding-top: 40px;
+}
+
+.bio {
+  font-size: 18px;
 }
