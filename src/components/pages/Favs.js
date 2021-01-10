@@ -31,10 +31,10 @@ export default function Favs() {
     return (
         <div>
             <h1>Bucket List</h1>
-            {Favs.length > 0 && Favs.map(favs => 
-                <FavCard {...favs} />
-                )}
+            {Favs.length > 0 ? Favs.map(favs => 
+                <FavCard {...favs} />) : null }
         </div>
+        //need to map out length to display x amount of results
     )
 }
 

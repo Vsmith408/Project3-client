@@ -18,7 +18,7 @@ const ResultsCard = (props) => {
         <div className="description">{props.address}</div>
       </div>
       <div className="extra content">
-        <button onClick={() => {console.log("click!")}} >Add To Favourites</button>
+        <button onClick={() => {console.log("click!") && clickedBtn(props)}} >Add To Favourites</button>
       </div>
     </div>
   </div>
