@@ -7,11 +7,11 @@
 .searchBarWrapper {
   background-image: url(../Images/travel-copy.jpg);
   background-size: cover;
-
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 250px 0;
   height: calc(100vh - 70px);
 }
@@ -20,11 +20,17 @@
   background-image: url(../Images/travel-copy.jpg);
 } */
 
-.header {
+.aboutheader {
   padding-bottom: 10px;
   padding-top: 40px;
 }
 
 .bio {
   font-size: 18px;
+}
+
+.home-header {
+  font-size: 58px;
+  color: rgba(5, 36, 76, 85%);
+  padding-bottom: 80px;
 }

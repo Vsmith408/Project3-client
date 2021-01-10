@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
-import axios from "axios";
+import React from "react";
 
 function Favourite() {
-    return (
+  return (
     <div>
       <button className="ui basic green button">Add to Favourites</button>
     </div>

@@ -3,11 +3,8 @@ import places from "../../apis/places";
 import SearchBar from "../SearchBar";
 import ResultsCard from "../ResultsCard";
 
-import API from "../../apis/API";
-
 import { css } from "@emotion/react";
 import GridLoader from "react-spinners/GridLoader";
-
 
 const override = css`
   display: block;
@@ -50,14 +47,16 @@ class Home extends React.Component {
     }
   };
 
-  
-
   render() {
     return (
       <>
         <div className="searchBarWrapper">
+          <div>
+            <h1 className="home-header">Find your next adventure here </h1>
+          </div>
           <SearchBar onSubmit={this.onSearchSubmit} />
         </div>
+
         <div
           className="ui container"
           style={{
