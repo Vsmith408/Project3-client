@@ -12,6 +12,8 @@
     "@testing-library/user-event": "^12.6.0",
     "auth0": "^2.31.1",
     "axios": "^0.21.0",
+    "husky": "^4.3.7",
+    "pretty-quick": "^3.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-json-pretty": "^2.2.0",

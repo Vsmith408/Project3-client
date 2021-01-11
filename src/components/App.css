@@ -5,14 +5,14 @@
 }
 
 .searchBarWrapper {
-  background-image: url(../Images/travel-copy.jpg);
+  background-image: url(../Images/background.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 250px 0;
+
   height: calc(100vh - 70px);
 }
 
@@ -30,7 +30,9 @@
 }
 
 .home-header {
-  font-size: 58px;
-  color: rgba(5, 36, 76, 85%);
-  padding-bottom: 80px;
+  text-align: center;
+  font-size: clamp(1rem, -0.875rem + 8.333vw, 3.5rem);
+
+  color: #fff;
+  margin-bottom: 24px !important;
 }
