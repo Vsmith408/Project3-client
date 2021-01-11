@@ -14,9 +14,8 @@ const ResultsCard = (props) => {
       .catch(err => console.log(err));
   }
   */
-  
 
-  return(
+  return (
     <div className="ui cards">
       <div className="card">
         <div className="content">
@@ -28,14 +27,26 @@ const ResultsCard = (props) => {
             </div>{" "}
           </div>
 
-        <div className="description">{props.address}</div>
+          <div className="description">{props.address}</div>
+        </div>
+
+
+
+        <div className="extra content">
+          <button onClick={clickedBtn || console.log("click!")}>
+            Add To Favourites
+          </button>
+        </div>
       </div>
-      <div className="extra content">
-      <button onClick={clickedBtn || console.log('click!')} >Add To Favourites</button>
-      </div>
-    </div>
     </div>
   );
 };
+
+
+
+
+
+
+
 
 export default ResultsCard;
