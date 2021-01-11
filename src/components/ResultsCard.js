@@ -48,8 +48,7 @@ const ResultsCard = (props) => {
                     >
                       Add to Favourites
                     </button>
-                  ) : 
-                  (
+                  ) : (
                     <button className="ui solid green button">Saved!</button>
                   )}
                 </div>
