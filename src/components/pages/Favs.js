@@ -36,7 +36,9 @@ export default function Favs() {
   return (
     <div>
       <h1>Bucket List</h1>
-      {Fav.length > 0 ? Fav.map((favs) => <FavCard {...favs} />) : null}
+      {Fav.length > 0
+        ? Fav.map((favs) => <FavCard {...favs} onDelete={loadFavs} />)
+        : null}
     </div>
     //need to map out length to display x amount of results
     //could take from 21 activities and produce a list
