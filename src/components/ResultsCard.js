@@ -9,30 +9,31 @@ const ResultsCard = (props) => {
   };
   */
   
-  const [Fav, setFav] = useState({
-    placeTitle: "",
-    favorite: false
-  });
+  const [Fav, setFav] = useState({});
   
+  //load all favorites
   useEffect(() => {
-    API.saveFavs().then((res) => {
-      setFav(res);
-      console.log("fav:");
-      console.log(Fav);
-    })
+    loadFavs()
   }, []);
+
+  //load all favorites and sets them to Fav
+  function loadFavs() {
+    API.getFavs()
+        .then(res => setFav(res.data))
+        .catch(err => console.log(err));
+}
   
-  /*
+  //save to favorites data
   function addToFavs(id) {
-    API.saveFavs(id)
-      .then(setState({}))
+    API.saveFavs({
+      id: "",
+      placeTitle: props.name
+    })
       .then(res => console.log("saved!"))
       .catch(err => console.log(err));
   }
-  */
   
   
-
   return(
     <div className="ui cards">
       <div className="card">
@@ -48,7 +49,7 @@ const ResultsCard = (props) => {
         <div className="description">{props.address}</div>
       </div>
       <div className="extra content">
-        <button className="ui basic green button" onClick={() => setFav({ ...Fav, favorite: false })}>Add To Favourites</button>
+        <button className="ui basic green button" onClick={() => addToFavs(props.name)}>Add To Favourites</button>
       </div>
     </div>
     </div>
