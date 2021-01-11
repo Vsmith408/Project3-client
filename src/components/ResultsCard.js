@@ -1,19 +1,40 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import { State, Toggle } from 'react-powerplug'
 import API from '../apis/API'
 
 const ResultsCard = (props) => {
+  /*
   const clickedBtn = () => {
-    API.saveFavs()
-    console.log('click!')
+    API.saveFavs();
+    console.log("click!");
+  };
+  */
+
+  const [Fav, setFav] = useState({})
+
+  //load all favorites
+  useEffect(() => {
+    loadFavs()
+  }, [])
+
+  //load all favorites and sets them to Fav
+  function loadFavs() {
+    API.getFavs()
+      .then((res) => setFav(res.data))
+      .catch((err) => console.log(err))
   }
 
-  /*
-  function addToFavs() {
-    API.saveFavs()
-      .then(res => console.log("saved!"))
-      .catch(err => console.log(err));
+  //save to favorites data
+  function addToFavs(id) {
+    API.saveFavs({
+      placeTitle: props.name,
+    })
+      .then((res) => console.log('saved!'))
+      .catch((err) => console.log(err))
   }
-  */
+  //do i need id: ""
+  //Fav.name instead?
 
   return (
     <div className="ui cards">
@@ -29,11 +50,26 @@ const ResultsCard = (props) => {
 
           <div className="description">{props.address}</div>
         </div>
-
         <div className="extra content">
-          <button onClick={clickedBtn || console.log('click!')}>
-            Add To Favourites
-          </button>
+          <Toggle initial={{ on: true }}>
+            {({ on, off, toggle, setOn }) => {
+              return (
+                <div onClick={toggle}>
+                  {on && (
+                    <button
+                      className="ui basic green button"
+                      onClick={() => addToFavs(props.name)}
+                    >
+                      Add to Favourites
+                    </button>
+                  )}
+                  {off && (
+                    <button className="ui solid green button">Saved!</button>
+                  )}
+                </div>
+              )
+            }}
+          </Toggle>
         </div>
       </div>
     </div>
@@ -41,3 +77,10 @@ const ResultsCard = (props) => {
 }
 
 export default ResultsCard
+
+// <button onClick={() => {addToFavs(props.name)}} >Add To Favourites</button>
+// addToFavs(prop.id)
+
+// <button onClick={() => setFav({ ...Fav, favorite: false })} className="btn btn-success">Add to Favorites</button>
+
+//<button className="ui basic green button" onClick={() => addToFavs(props.name)}>Add To Favourites</button>
