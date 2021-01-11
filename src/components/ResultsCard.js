@@ -41,15 +41,14 @@ const ResultsCard = (props) => {
             {({ on, off, toggle, setOn }) => {
               return (
                 <div onClick={toggle}>
-                  {on && (
+                  {on ? (
                     <button
                       className="ui basic green button"
                       onClick={() => addToFavs(props.name)}
                     >
                       Add to Favourites
                     </button>
-                  )}
-                  {off && (
+                  ) : (
                     <button className="ui solid green button">Saved!</button>
                   )}
                 </div>
