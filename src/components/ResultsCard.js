@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import API from "../apis/API";
 
 const ResultsCard = (props) => {
@@ -32,6 +33,8 @@ const ResultsCard = (props) => {
       .then(res => console.log("saved!"))
       .catch(err => console.log(err));
   }
+  //do i need id: ""
+  //Fav.name instead?
   
   
   return(
