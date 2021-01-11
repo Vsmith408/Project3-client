@@ -9,12 +9,12 @@ const API = {
     return axios.get("/api/favorite/" + id);
   },
   // Deletes the book with the given id
-  deleteFav: function () {
-    return axios.delete("/api/favorite/");
+  deleteFav: function (id) {
+    return axios.delete("/api/favorite/", + id);
   },
   // Saves a book to the database
-  saveFavs: function (FavData) {
-    return axios.post("/", FavData);
+  saveFavs: function (favData) {
+    return axios.post("/api/favorite", favData);
   },
 };
 

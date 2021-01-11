@@ -27,7 +27,6 @@ const ResultsCard = (props) => {
   //save to favorites data
   function addToFavs(id) {
     API.saveFavs({
-      id: "",
       placeTitle: props.name
     })
       .then(res => console.log("saved!"))
@@ -62,5 +61,6 @@ const ResultsCard = (props) => {
 export default ResultsCard;
 
 // <button onClick={() => {addToFavs(props.name)}} >Add To Favourites</button>
+// addToFavs(prop.id)
 
 // <button onClick={() => setFav({ ...Fav, favorite: false })} className="btn btn-success">Add to Favorites</button>
