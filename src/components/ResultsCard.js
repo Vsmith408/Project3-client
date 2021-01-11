@@ -11,20 +11,6 @@ const ResultsCard = (props) => {
   };
   */
 
-  const [Fav, setFav] = useState({})
-
-  //load all favorites
-  useEffect(() => {
-    loadFavs()
-  }, [])
-
-  //load all favorites and sets them to Fav
-  function loadFavs() {
-    API.getFavs()
-      .then((res) => setFav(res.data))
-      .catch((err) => console.log(err))
-  }
-
   //save to favorites data
   function addToFavs(id) {
     API.saveFavs({

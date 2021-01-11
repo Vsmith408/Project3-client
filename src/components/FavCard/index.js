@@ -1,26 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import { List, ListItem } from '../List'
 import API from '../../apis/API'
 
 const FavCard = (props) => {
-  //set state
-  const [Fav, setFav] = useState({})
-
-  //load all favorites
-  useEffect(() => {
-    loadFavs()
-  }, [])
-
-  function loadFavs() {
-    API.getFavs()
-      .then((res) => setFav(res.data))
-      .catch((err) => console.log(err))
-  }
-
   function removeFavs(id) {
     API.deleteFav(id)
-      .then((res) => loadFavs())
+      .then((res) => props.onDelete())
       .catch((err) => console.log(err))
   }
 
@@ -28,10 +12,11 @@ const FavCard = (props) => {
     <div className="ui cards">
       <div className="card">
         <div className="content">
-          <div className="header">{Fav.id}</div>
+          <div className="header">{props._id}</div>
+          <p>{props.placeTitle}</p>
           <button
             className="ui basic green button"
-            onClick={() => removeFavs(Fav.id)}
+            onClick={() => removeFavs(props._id)}
           >
             Remove
           </button>

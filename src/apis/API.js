@@ -10,7 +10,7 @@ const API = {
   },
   // Deletes the book with the given id
   deleteFav: function (id) {
-    return axios.delete('/api/favorite/', +id)
+    return axios.delete('/api/favorite/' + id)
   },
   // Saves a book to the database
   saveFavs: function (favData) {
