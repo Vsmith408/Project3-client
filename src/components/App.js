@@ -9,8 +9,6 @@ import Favs from './pages/Favs'
 
 import Profile from './pages/Profile'
 
-import Favorites from './pages/Favorites'
-
 class App extends React.Component {
   render() {
     return (
