@@ -1,4 +1,4 @@
-**#Travel Now#**
+**Travel Now**
 
 **_Description_**
 
