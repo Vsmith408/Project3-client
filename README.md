@@ -2,6 +2,9 @@
 
 **_Description_**
 
+Find your next adventure with TravelNow. This web application provides you with access to hotels, restaurants and even things to do near the place you would like to travel. A one stop shop to plan your perfect trip!
+This is a full MERN application,utilizing Node.js, Express, React, and MongoDB.
+
 **_Table of Contents_**
 
 - [Installation](#Installation)
