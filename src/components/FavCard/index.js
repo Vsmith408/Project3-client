@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const FavCard = (props) => (
   <div className="ui cards">
@@ -8,6 +8,6 @@ const FavCard = (props) => (
       </div>
     </div>
   </div>
-);
+)
 
-export default FavCard;
+export default FavCard

@@ -1,11 +1,11 @@
-import React from "react";
-import API from "../apis/API";
+import React from 'react'
+import API from '../apis/API'
 
 const ResultsCard = (props) => {
   const clickedBtn = () => {
-    API.saveFavs();
-    console.log("click!");
-  };
+    API.saveFavs()
+    console.log('click!')
+  }
 
   /*
   function addToFavs() {
@@ -21,32 +21,23 @@ const ResultsCard = (props) => {
         <div className="content">
           <div className="header">{props.name}</div>
           <div className="meta">
-            {props.rating}{" "}
+            {props.rating}{' '}
             <div className="ui  rating" data-max-rating="1">
               <i className="star icon"></i>
-            </div>{" "}
+            </div>{' '}
           </div>
 
           <div className="description">{props.address}</div>
         </div>
 
-
-
         <div className="extra content">
-          <button onClick={clickedBtn || console.log("click!")}>
+          <button onClick={clickedBtn || console.log('click!')}>
             Add To Favourites
           </button>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-
-
-
-
-
-
-
-export default ResultsCard;
+export default ResultsCard

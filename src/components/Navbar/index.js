@@ -1,21 +1,21 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import "./style.css";
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import './style.css'
 
-import { withAuth0 } from "@auth0/auth0-react";
+import { withAuth0 } from '@auth0/auth0-react'
 
-import Login from "../pages/Login";
-import Logout from "../pages/Logout";
+import Login from '../pages/Login'
+import Logout from '../pages/Logout'
 
 class Navbar extends Component {
-  state = { clicked: false };
+  state = { clicked: false }
 
   handleClick = () => {
-    this.setState({ clicked: !this.state.clicked });
-  };
+    this.setState({ clicked: !this.state.clicked })
+  }
 
   render() {
-    console.log(this.props);
+    console.log(this.props)
     return (
       <nav className="navbar ">
         {/* <div className="container"> */}
@@ -24,17 +24,17 @@ class Navbar extends Component {
         </Link>
         <div className="menu-icon" onClick={this.handleClick}>
           <i
-            className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}
+            className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}
           ></i>
         </div>
-        <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
+        <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
           <li className="nav-item">
             <Link
               to="/about"
               className={
-                window.location.pathname === "/about"
-                  ? "nav-link active"
-                  : "nav-link"
+                window.location.pathname === '/about'
+                  ? 'nav-link active'
+                  : 'nav-link'
               }
             >
               About
@@ -44,9 +44,9 @@ class Navbar extends Component {
             <Link
               to="/favorite"
               className={
-                window.location.pathname === "/favorite"
-                  ? "nav-link active"
-                  : "nav-link"
+                window.location.pathname === '/favorite'
+                  ? 'nav-link active'
+                  : 'nav-link'
               }
             >
               Favorites
@@ -57,9 +57,9 @@ class Navbar extends Component {
             <Link
               to="/profile"
               className={
-                window.location.pathname === "/profile"
-                  ? "nav-link active"
-                  : "nav-link"
+                window.location.pathname === '/profile'
+                  ? 'nav-link active'
+                  : 'nav-link'
               }
             >
               Profile
@@ -69,17 +69,17 @@ class Navbar extends Component {
           <div className="loginAuth">
             <li className="nav-item">
               <Login>
-                {window.location.pathname === "/login"
-                  ? "nav-link active"
-                  : "nav-link"}
-              </Login>{" "}
+                {window.location.pathname === '/login'
+                  ? 'nav-link active'
+                  : 'nav-link'}
+              </Login>{' '}
               <Logout />
             </li>
           </div>
         </ul>
       </nav>
-    );
+    )
   }
 }
 
-export default withAuth0(Navbar);
+export default withAuth0(Navbar)

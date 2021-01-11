@@ -1,21 +1,21 @@
-import React, { useEffect, useState } from "react";
-import API from "../../apis/API";
-import FavCard from "../FavCard";
+import React, { useEffect, useState } from 'react'
+import API from '../../apis/API'
+import FavCard from '../FavCard'
 
 export default function Favs() {
   //setting initial state
-  const [Fav, setFav] = useState([]);
+  const [Fav, setFav] = useState([])
 
   //load all favorites and store them with setFavs
   useEffect(() => {
-    loadFavs();
-  }, []);
+    loadFavs()
+  }, [])
 
   //load all favorites and sets them to Favs
   function loadFavs() {
     API.getFavs()
       .then((res) => setFav(res.data))
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
   }
 
   /*
@@ -40,7 +40,7 @@ export default function Favs() {
     </div>
     //need to map out length to display x amount of results
     //could take from 21 activities and produce a list
-  );
+  )
 }
 
 //fix favcard

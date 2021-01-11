@@ -1,5 +1,5 @@
-import React from "react";
-import about from "../../Images/about.jpg";
+import React from 'react'
+import about from '../../Images/about.jpg'
 
 function About() {
   return (
@@ -23,7 +23,7 @@ function About() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default About;
+export default About

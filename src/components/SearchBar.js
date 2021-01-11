@@ -1,19 +1,19 @@
-import React from "react";
+import React from 'react'
 
 class SearchBar extends React.Component {
-  state = { term: "" };
+  state = { term: '' }
 
   onFormSubmit = (event) => {
-    event.preventDefault();
-    this.props.onSubmit(this.state.term);
-  };
+    event.preventDefault()
+    this.props.onSubmit(this.state.term)
+  }
   render() {
     return (
       <div className="">
         <form onSubmit={this.onFormSubmit} className="ui form">
           <div className="ui huge icon input">
             <input
-              style={{ width: 600, maxWidth: "90vw" }}
+              style={{ width: 600, maxWidth: '90vw' }}
               type="text"
               placeholder="Search adventures here"
               value={this.state.term}
@@ -23,8 +23,8 @@ class SearchBar extends React.Component {
           </div>
         </form>
       </div>
-    );
+    )
   }
 }
 
-export default SearchBar;
+export default SearchBar
