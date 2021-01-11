@@ -1,8 +1,8 @@
-import React from "react";
-import { useAuth0 } from "@auth0/auth0-react";
+import React from 'react'
+import { useAuth0 } from '@auth0/auth0-react'
 
 const Profile = () => {
-  const { user, isAuthenticated } = useAuth0();
+  const { user, isAuthenticated } = useAuth0()
 
   return (
     isAuthenticated && (
@@ -19,7 +19,7 @@ const Profile = () => {
         </div>
       </div>
     )
-  );
-};
+  )
+}
 
-export default Profile;
+export default Profile
