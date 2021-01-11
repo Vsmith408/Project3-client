@@ -13,7 +13,7 @@ function MyToggleBtn() {
           {this.state.on ? (
             <button className="ui basic green button">Add to Favourites</button>
           ) : (
-            <button className="ui solid green button">Remove from Favourites</button>
+            <button className="ui solid green button">Saved!</button>
           )}
         </div>
       );
