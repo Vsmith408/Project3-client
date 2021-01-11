@@ -48,7 +48,7 @@ const ResultsCard = (props) => {
         <div className="description">{props.address}</div>
       </div>
       <div className="extra content">
-        <button onClick={() => setFav({ ...Fav, favorite: false })}>Add To Favourites</button>
+        <button className="ui basic green button" onClick={() => setFav({ ...Fav, favorite: false })}>Add To Favourites</button>
       </div>
     </div>
     </div>
