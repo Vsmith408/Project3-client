@@ -1,8 +1,6 @@
-**Travel Now**
+**#Travel Now#**
 
 **_Description_**
-
-An application in node.js that allows users to generate a readme for their repositories. This application utilizes the Inquirer npm package.
 
 **_Table of Contents_**
 
@@ -32,14 +30,15 @@ The user does not need to log in to utilize the search function. However, using 
 ![Image of login](/assets/login.png)
 
 <a name="Guidelines">**_Contributors_**</a>
-[Camilo Alvarez](https://github.com/Melo718)
-[Taylor Edwards](www.github.com/tedwar52)
-[Caroline Manson](https://github.com/carolinem15)
-[Phil Robbins](https://github.com/plrobbins)
-[Victoria Smith](https://github.com/Vsmith408)
+
+[Camilo Alvarez](https://github.com/Melo718),
+[Taylor Edwards](www.github.com/tedwar52),
+[Caroline Manson](https://github.com/carolinem15),
+[Phil Robbins](https://github.com/plrobbins),
+[Victoria Smith](https://github.com/Vsmith408),
 
 <a name="More">**_Necessary Links_**</a>
 
-[Deployed Link!](https://projecttravelnow.netlify.app/)
-[Github Repository (Client)](https://github.com/Vsmith408/Project3-client)
+[Deployed Link!](https://projecttravelnow.netlify.app/) ||
+[Github Repository (Client)](https://github.com/Vsmith408/Project3-client) ||
 [Github Repository (Server)](https://github.com/carolinem15/project3)
