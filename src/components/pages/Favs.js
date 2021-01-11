@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import API from '../../apis/API'
 import FavCard from '../FavCard'
+import background from '../../Images/plan.jpg'
 
 export default function Favs() {
   //setting initial state
@@ -34,11 +35,20 @@ export default function Favs() {
   // }
 
   return (
-    <div>
-      <h1>Bucket List</h1>
-      {Fav.length > 0
-        ? Fav.map((favs) => <FavCard {...favs} onDelete={loadFavs} />)
-        : null}
+    <div style={{ backgroundImage: `url(${background})`, minHeight: '100vh' }}>
+      <div className="ui container">
+        <h1 className="header">Bucket List</h1>
+        <div className="ui three column doubling stackable grid">
+          {Fav.length > 0
+            ? Fav.map((favs) => (
+                <div className="column">
+                  {' '}
+                  <FavCard {...favs} onDelete={loadFavs} />
+                </div>
+              ))
+            : null}
+        </div>
+      </div>
     </div>
     //need to map out length to display x amount of results
     //could take from 21 activities and produce a list
@@ -47,3 +57,14 @@ export default function Favs() {
 
 //fix favcard
 //add remove from favs button -- (add this toggle feature to add button as well?)
+
+/*
+
+{Fav.length > 0 ? Fav.map((favs) =>(
+    <div className="column">
+      <FavCard {...favs} onDelete={loadFavs} />
+      : null
+    </div> 
+))}
+
+*/
