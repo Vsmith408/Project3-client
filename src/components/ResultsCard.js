@@ -1,19 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import API from "../apis/API";
 
 const ResultsCard = (props) => {
+  /*
   const clickedBtn = () => {
     API.saveFavs();
     console.log("click!");
   };
-
+  */
+  
+  const [Fav, setFav] = useState({
+    placeTitle: "",
+    favorite: false
+  });
+  
+  useEffect(() => {
+    API.saveFavs().then((res) => {
+      setFav(res);
+      console.log("fav:");
+      console.log(Fav);
+    })
+  }, []);
+  
   /*
-  function addToFavs() {
-    API.saveFavs()
+  function addToFavs(id) {
+    API.saveFavs(id)
+      .then(setState({}))
       .then(res => console.log("saved!"))
       .catch(err => console.log(err));
   }
   */
+  
   
 
   return(
@@ -31,7 +48,7 @@ const ResultsCard = (props) => {
         <div className="description">{props.address}</div>
       </div>
       <div className="extra content">
-        <button onClick={() => {console.log("click!")}} >Add To Favourites</button>
+        <button onClick={() => setFav({ ...Fav, favorite: false })}>Add To Favourites</button>
       </div>
     </div>
     </div>
@@ -39,3 +56,7 @@ const ResultsCard = (props) => {
 };
 
 export default ResultsCard;
+
+// <button onClick={() => {addToFavs(props.name)}} >Add To Favourites</button>
+
+// <button onClick={() => setFav({ ...Fav, favorite: false })} className="btn btn-success">Add to Favorites</button>

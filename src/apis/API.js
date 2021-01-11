@@ -13,8 +13,8 @@ const API = {
     return axios.delete("/api/favorite/" + id);
   },
   // Saves a book to the database
-  saveFavs: function () {
-    return axios.post("/api/favorite");
+  saveFavs: function (FavData) {
+    return axios.post("/api/favorite", FavData);
   },
 };
 
