@@ -12,8 +12,7 @@ const FavCard = (props) => {
     <div className="ui cards">
       <div className="card">
         <div className="content">
-          <div className="header">{props._placeTitle}</div>
-          <p>{props.placeTitle}</p>
+          <p className="header">{props.placeTitle}</p>
           <button
             className="ui basic green button"
             onClick={() => removeFavs(props._id)}

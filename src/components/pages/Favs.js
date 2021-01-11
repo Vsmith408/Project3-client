@@ -37,7 +37,7 @@ export default function Favs() {
   return (
     <div style={{ backgroundImage: `url(${background})`, minHeight: '100vh' }}>
       <div className="ui container">
-        <h1 className="header">Bucket List</h1>
+        <h1 className="fav-header">Bucket List</h1>
         <div className="ui three column doubling stackable grid">
           {Fav.length > 0
             ? Fav.map((favs) => (
