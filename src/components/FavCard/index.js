@@ -19,7 +19,7 @@ const FavCard = (props) => {
   }
 
   function removeFavs(id) {
-    API.deleteFavs(id)
+    API.deleteFav(id)
       .then(res => loadFavs())
       .catch(err => console.log(err));
   }
