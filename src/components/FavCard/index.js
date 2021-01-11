@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { List, ListItem } from "../List";
 import API from "../../apis/API";
 
 const FavCard = (props) => {
   
+
   //set state
   const [Fav, setFav] = useState({})
 
@@ -26,10 +28,9 @@ const FavCard = (props) => {
   
   return (
     <div className="ui cards">
-      <h1>Bucket List</h1>
     <div className="card">
       <div className="content">
-        <div className="header">{props.name}</div>
+        <div className="header">{Fav.id}</div>
         <button className="ui basic green button" onClick={() => removeFavs(Fav.id)}>Remove</button>
       </div>
     </div>
@@ -41,3 +42,21 @@ export default FavCard;
 
 //add a ) : ( "No Results to Display"
 //map() through results
+
+/*
+ return (
+    <div className="ui cards">
+      <h1>Bucket List</h1>
+    <div className="card">
+      <div className="content">
+        <div className="header">{props.name}</div>
+        <button className="ui basic green button" onClick={() => removeFavs(Fav.id)}>Remove</button>
+      </div>
+    </div>
+  </div>
+  );
+
+);
+
+
+*/
