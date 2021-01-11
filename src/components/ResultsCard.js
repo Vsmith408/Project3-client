@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { State, Toggle } from  "react-powerplug";
 import API from "../apis/API";
 
 const ResultsCard = (props) => {
@@ -51,7 +52,16 @@ const ResultsCard = (props) => {
         <div className="description">{props.address}</div>
       </div>
       <div className="extra content">
-        <button className="ui basic green button" onClick={() => addToFavs(props.name)}>Add To Favourites</button>
+        <Toggle initial={{ on: true }}>
+          {({ on, off, toggle, setOn }) => {
+            return (
+              <div onClick={toggle}>
+                { on && <button className="ui basic green button" onClick={() => addToFavs(props.name)}>Add to Favourites</button> }
+                { off && <button className="ui solid green button">Saved!</button>}
+              </div>
+            )
+          }}
+        </Toggle>
       </div>
     </div>
     </div>
@@ -64,3 +74,5 @@ export default ResultsCard;
 // addToFavs(prop.id)
 
 // <button onClick={() => setFav({ ...Fav, favorite: false })} className="btn btn-success">Add to Favorites</button>
+
+//<button className="ui basic green button" onClick={() => addToFavs(props.name)}>Add To Favourites</button>
