@@ -3,7 +3,7 @@ import about from "../../Images/about.jpg";
 
 function About() {
   return (
-    <div className="ui vertically divided grid">
+    <div className="ui stackable vertically divided grid">
       <div className="two column row">
         <div className="column">
           <img className="ui huge image" src={about} alt="travel"></img>
