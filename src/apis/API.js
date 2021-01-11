@@ -3,7 +3,7 @@ import axios from "axios";
 const API = {
   // Gets all books
   getFavs: function () {
-    return axios.get("/api/favorite");
+    return axios.get("/");
   },
   getFav: function (id) {
     return axios.get("/api/favorite/" + id);
