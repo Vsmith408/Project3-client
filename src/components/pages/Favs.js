@@ -27,11 +27,11 @@ export default function Favs() {
     */
 
     //Deletes a favorite from the database using given id, then reloads favorites from the db
-    function removeFavs(id) {
-        API.deleteFavs(id)
-            .then(res => loadFavs())
-            .catch(err => console.log(err));
-    }
+    // function removeFavs(id) {
+    //     API.deleteFavs(id)
+    //         .then(res => loadFavs())
+    //         .catch(err => console.log(err));
+    // }
     
     return (
         <div>
