@@ -23,14 +23,14 @@ To run this application from your own computer, please be sure to clone the code
 This website is very user friendly. The home page displays the search bar allowing users to search for any city in the world. After searching, results are displayed and separated by category (Hotels, Restaurants, and Points of Interest). If the user is logged in they may add results to their favorites page.
 
 Here's the homepage.
-![Image of home](/assets/home.png)
+![Image of home](./assets/home.png)
 
 Here's the favorites page.
-![Image of favorites](/assets/favpg.png)
+![Image of favorites](./assets/favpg.png)
 
 The user does not need to log in to utilize the search function. However, using auth0, users can easily sign up using their Google accounts.
 
-![Image of login](/assets/login.png)
+![Image of login](./assets/login.png)
 
 <a name="Guidelines">**_Contributors_**</a>
 
@@ -45,3 +45,5 @@ The user does not need to log in to utilize the search function. However, using 
 [Deployed Link!](https://projecttravelnow.netlify.app/) ||
 [Github Repository (Client)](https://github.com/Vsmith408/Project3-client) ||
 [Github Repository (Server)](https://github.com/carolinem15/project3)
+
+![PowerPoint Presentation](./assets/TravelNow.pdf)
