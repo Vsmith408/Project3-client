@@ -26,7 +26,7 @@ Here's the homepage.
 ![Image of home](/assets/home.png)
 
 Here's the favorites page.
-![Image of favorites]()
+![Image of favorites](/assets/favpg.png)
 
 The user does not need to log in to utilize the search function. However, using auth0, users can easily sign up using their Google accounts.
 

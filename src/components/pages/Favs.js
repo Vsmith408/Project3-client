@@ -3,6 +3,8 @@ import API from '../../apis/API'
 import FavCard from '../FavCard'
 import background from '../../Images/plan.jpg'
 
+import { css } from "@emotion/react";
+
 export default function Favs() {
   //setting initial state
   const [Fav, setFav] = useState([])
